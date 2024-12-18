@@ -5,6 +5,6 @@ date:   2024-7-23 23:03:34 +0800
 categories: jekyll update
 ---
 
-![2](/images/Screenshot%202024-07-23%20113032.jpg)
+![图片](/images/2024072301.jpg)
 
-![3](/images/Screenshot%202024-07-23%20113007.jpg)
+![图片](/images/2024072302.jpg)
