@@ -7,7 +7,7 @@ categories: jekyll update
 
 <style>
     code, pre {
-        font-family: font-family: 'Fira Code', 'Source Code Pro', Consolas, 'Courier New';
+        font-family: 'Fira Code', 'Source Code Pro', 'Consolas', 'Courier New';
         padding: 16px;
         margin: 10px 0;
         display: block;
