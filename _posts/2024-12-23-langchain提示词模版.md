@@ -7,7 +7,7 @@ categories: jekyll update
 
 <style>
     code, pre {
-        font-family: 'Courier New', monospace;
+        font-family: font-family: 'Fira Code', 'Source Code Pro', Consolas, 'Courier New';
         color: #ffffff;
         background-color: #2d2d30;
         padding: 16px;
@@ -15,8 +15,6 @@ categories: jekyll update
         display: block;
         overflow-x: auto;
         font-weight: bold;
-        border-radius: 4px; /* 圆角边框 */
-        box-shadow: inset 2px 4px 6px rgba(0, 0, 0, 0.1); /* 内阴影 */
     }
 </style>
 
