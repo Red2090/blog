@@ -8,11 +8,6 @@ categories: jekyll update
 <style>
     code, pre {
         font-family: 'Fira Code', 'Source Code Pro', 'Consolas', 'Courier New';
-        padding: 16px;
-        margin: 10px 0;
-        display: block;
-        overflow-x: auto;
-        font-weight: bold;
     }
 </style>
 
