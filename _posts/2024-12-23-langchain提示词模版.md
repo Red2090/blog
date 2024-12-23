@@ -36,3 +36,10 @@ response = model.invoke([
 ])
 print(response.content)
 ```
+
+<pre style="font-family: 'Courier New', monospace; font-size: 14px;">
+<code>
+def hello_world():
+    print("Hello, world!")
+</code>
+</pre>
