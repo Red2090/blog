@@ -94,4 +94,10 @@ namespace WindowsFormsApp3
 }
 ```
 
-
+<style>
+    code {
+        font-family: 'Fira Code', 'Source Code Pro', 'Consolas', 'Courier New';
+        font-size: small;
+        font-weight: bold;
+    }
+</style>

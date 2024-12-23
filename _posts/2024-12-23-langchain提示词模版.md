@@ -11,10 +11,6 @@ categories: jekyll update
         font-size: small;
         font-weight: bold;
     }
-
-    .language-python {
-        background-color: #f8f8f8;
-    }
 </style>
 
 ```python
