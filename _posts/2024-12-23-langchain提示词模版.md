@@ -5,8 +5,14 @@ date:   2024-12-23 14:20:00 +0800
 categories: jekyll update
 ---
 
+<style>
+    code, pre {
+        font-family: 'Courier New', monospace;
+    }
+</style>
 
-<p style="background-color: black; color: white; font-family: 'Courier New', monospace; font-weight: bold;">
+```python
+okokokokokok
     from langchain_openai import ChatOpenAI
     from langchain.prompts import SystemMessagePromptTemplate, HumanMessagePromptTemplate, AIMessagePromptTemplate
     from langchain.prompts import FewShotChatMessagePromptTemplate
@@ -36,4 +42,4 @@ categories: jekyll update
         human_prompt
     ])
     print(response.content)
-<p>
+```
