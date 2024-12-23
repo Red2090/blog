@@ -8,6 +8,7 @@ categories: jekyll update
 <style>
     code, pre {
         font-family: 'Fira Code', 'Source Code Pro', 'Consolas', 'Courier New';
+        font-size: small;
     }
 </style>
 
