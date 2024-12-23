@@ -13,7 +13,7 @@ categories: jekyll update
     }
 
     pre {
-        color:rgb(255, 255, 255);
+        background-color: #f8f8f8;
     }
 </style>
 
