@@ -38,7 +38,7 @@ print(response.content)
 ```
 
 <pre style="font-family: 'Courier New', monospace; font-size: 14px;">
-<code>
+<code style="font-family: 'Courier New', monospace; font-size: 14px;">
 def hello_world():
     print("Hello, world!")
 </code>
