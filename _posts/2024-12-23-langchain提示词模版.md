@@ -28,7 +28,7 @@ system_prompt = system_prompt_template.format(input_language="英语", output_la
 human_prompt = human_prompt_template.format(text="I'm so hungry could eat a horse", style="文言文")
 
 
-model = ChatOpenAI(model="moonshot-v1-8k")
+model = ChatOpenAI(model="moonshot-v1-8k", base_url="https://api.moonshot.cn/v1")
 
 response = model.invoke([
     system_prompt,
