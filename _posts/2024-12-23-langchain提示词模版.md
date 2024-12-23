@@ -6,11 +6,14 @@ categories: jekyll update
 ---
 
 <style>
-    code, pre {
+    code {
         font-family: 'Fira Code', 'Source Code Pro', 'Consolas', 'Courier New';
         font-size: small;
         font-weight: bold;
-        background-color: #f5f5f5;
+    }
+
+    pre {
+        color:rgb(255, 255, 255);
     }
 </style>
 
