@@ -12,7 +12,7 @@ categories: jekyll update
         font-weight: bold;
     }
 
-    .python-language {
+    .language-python {
         background-color: #f8f8f8;
     }
 </style>
