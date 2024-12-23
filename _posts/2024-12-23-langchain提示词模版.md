@@ -8,12 +8,15 @@ categories: jekyll update
 <style>
     code, pre {
         font-family: 'Courier New', monospace;
-        color: #ffffff; /* 字体颜色为白色 */
-        background-color: #2d2d30; /* VSCode的深色主题背景色 */
-        padding: 16px; /* 给代码块增加一些内边距 */
-        margin: 10px 0; /* 在代码块周围增加外边距 */
-        display: block; /* 确保pre元素以块级元素显示 */
-        overflow-x: auto; /* 如果代码过长，允许横向滚动 */
+        color: #ffffff;
+        background-color: #2d2d30;
+        padding: 16px;
+        margin: 10px 0;
+        display: block;
+        overflow-x: auto;
+        font-weight: bold;
+        border-radius: 4px; /* 圆角边框 */
+        box-shadow: inset 2px 4px 6px rgba(0, 0, 0, 0.1); /* 内阴影 */
     }
 </style>
 
