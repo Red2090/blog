@@ -7,7 +7,7 @@ categories: jekyll update
 
 <style>
     code {
-        font-family: 'SF Mono', 'Menlo', 'Consolas', monospace;
+        font-family: 'SF Mono', 'Menlo', 'Consolas';
         font-size: small;
         font-weight: bold;
     }
