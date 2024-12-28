@@ -1,17 +1,17 @@
 
 
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <id>http://localhost:4000/blog/</id>
+  <id>https://red2090.github.io/blog/</id>
   <title>blog</title>
   <subtitle>Welcome!</subtitle>
-  <updated>2024-12-28T12:41:58+08:00</updated>
+  <updated>2024-12-28T12:44:19+08:00</updated>
   <author>
     <name>陆品宏</name>
-    <uri>http://localhost:4000/blog/</uri>
+    <uri>https://red2090.github.io/blog/</uri>
   </author>
-  <link rel="self" type="application/atom+xml" href="http://localhost:4000/blog/feed.xml"/>
+  <link rel="self" type="application/atom+xml" href="https://red2090.github.io/blog/feed.xml"/>
   <link rel="alternate" type="text/html" hreflang="en"
-    href="http://localhost:4000/blog/"/>
+    href="https://red2090.github.io/blog/"/>
   <generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator>
   <rights> © 2024 陆品宏 </rights>
   <icon>/blog/assets/img/favicons/favicon.ico</icon>
@@ -21,13 +21,13 @@
   
   <entry>
     <title>规范模型返回格式</title>
-    <link href="http://localhost:4000/blog/posts/%E8%A7%84%E8%8C%83%E6%A8%A1%E5%9E%8B%E5%9B%9E%E5%A4%8D%E6%A0%BC%E5%BC%8F/" rel="alternate" type="text/html" title="规范模型返回格式" />
+    <link href="https://red2090.github.io/blog/posts/%E8%A7%84%E8%8C%83%E6%A8%A1%E5%9E%8B%E5%9B%9E%E5%A4%8D%E6%A0%BC%E5%BC%8F/" rel="alternate" type="text/html" title="规范模型返回格式" />
     <published>2024-12-24T18:50:00+08:00</published>
   
     <updated>2024-12-28T12:40:11+08:00</updated>
   
-    <id>http://localhost:4000/blog/posts/%E8%A7%84%E8%8C%83%E6%A8%A1%E5%9E%8B%E5%9B%9E%E5%A4%8D%E6%A0%BC%E5%BC%8F/</id>
-    <content type="text/html" src="http://localhost:4000/blog/posts/%E8%A7%84%E8%8C%83%E6%A8%A1%E5%9E%8B%E5%9B%9E%E5%A4%8D%E6%A0%BC%E5%BC%8F/" />
+    <id>https://red2090.github.io/blog/posts/%E8%A7%84%E8%8C%83%E6%A8%A1%E5%9E%8B%E5%9B%9E%E5%A4%8D%E6%A0%BC%E5%BC%8F/</id>
+    <content type="text/html" src="https://red2090.github.io/blog/posts/%E8%A7%84%E8%8C%83%E6%A8%A1%E5%9E%8B%E5%9B%9E%E5%A4%8D%E6%A0%BC%E5%BC%8F/" />
     <author>
       <name>陆品宏</name>
     </author>
@@ -47,13 +47,13 @@
   
   <entry>
     <title>langchain提示词</title>
-    <link href="http://localhost:4000/blog/posts/langchain%E6%8F%90%E7%A4%BA%E8%AF%8D%E6%A8%A1%E7%89%88/" rel="alternate" type="text/html" title="langchain提示词" />
+    <link href="https://red2090.github.io/blog/posts/langchain%E6%8F%90%E7%A4%BA%E8%AF%8D%E6%A8%A1%E7%89%88/" rel="alternate" type="text/html" title="langchain提示词" />
     <published>2024-12-23T14:20:00+08:00</published>
   
     <updated>2024-12-28T12:40:11+08:00</updated>
   
-    <id>http://localhost:4000/blog/posts/langchain%E6%8F%90%E7%A4%BA%E8%AF%8D%E6%A8%A1%E7%89%88/</id>
-    <content type="text/html" src="http://localhost:4000/blog/posts/langchain%E6%8F%90%E7%A4%BA%E8%AF%8D%E6%A8%A1%E7%89%88/" />
+    <id>https://red2090.github.io/blog/posts/langchain%E6%8F%90%E7%A4%BA%E8%AF%8D%E6%A8%A1%E7%89%88/</id>
+    <content type="text/html" src="https://red2090.github.io/blog/posts/langchain%E6%8F%90%E7%A4%BA%E8%AF%8D%E6%A8%A1%E7%89%88/" />
     <author>
       <name>陆品宏</name>
     </author>
@@ -73,13 +73,13 @@
   
   <entry>
     <title>二维码</title>
-    <link href="http://localhost:4000/blog/posts/%E4%BA%8C%E7%BB%B4%E7%A0%81/" rel="alternate" type="text/html" title="二维码" />
+    <link href="https://red2090.github.io/blog/posts/%E4%BA%8C%E7%BB%B4%E7%A0%81/" rel="alternate" type="text/html" title="二维码" />
     <published>2024-12-23T09:00:00+08:00</published>
   
     <updated>2024-12-28T12:40:11+08:00</updated>
   
-    <id>http://localhost:4000/blog/posts/%E4%BA%8C%E7%BB%B4%E7%A0%81/</id>
-    <content type="text/html" src="http://localhost:4000/blog/posts/%E4%BA%8C%E7%BB%B4%E7%A0%81/" />
+    <id>https://red2090.github.io/blog/posts/%E4%BA%8C%E7%BB%B4%E7%A0%81/</id>
+    <content type="text/html" src="https://red2090.github.io/blog/posts/%E4%BA%8C%E7%BB%B4%E7%A0%81/" />
     <author>
       <name>陆品宏</name>
     </author>
@@ -99,13 +99,13 @@
   
   <entry>
     <title>一些ai词汇</title>
-    <link href="http://localhost:4000/blog/posts/ai%E8%AF%8D%E6%B1%87/" rel="alternate" type="text/html" title="一些ai词汇" />
+    <link href="https://red2090.github.io/blog/posts/ai%E8%AF%8D%E6%B1%87/" rel="alternate" type="text/html" title="一些ai词汇" />
     <published>2024-12-22T09:21:00+08:00</published>
   
     <updated>2024-12-28T12:40:11+08:00</updated>
   
-    <id>http://localhost:4000/blog/posts/ai%E8%AF%8D%E6%B1%87/</id>
-    <content type="text/html" src="http://localhost:4000/blog/posts/ai%E8%AF%8D%E6%B1%87/" />
+    <id>https://red2090.github.io/blog/posts/ai%E8%AF%8D%E6%B1%87/</id>
+    <content type="text/html" src="https://red2090.github.io/blog/posts/ai%E8%AF%8D%E6%B1%87/" />
     <author>
       <name>陆品宏</name>
     </author>
@@ -125,13 +125,13 @@
   
   <entry>
     <title>改写Pywhatkit包的部分代码</title>
-    <link href="http://localhost:4000/blog/posts/%E6%94%B9%E5%86%99Pywhatkit%E5%8C%85/" rel="alternate" type="text/html" title="改写Pywhatkit包的部分代码" />
+    <link href="https://red2090.github.io/blog/posts/%E6%94%B9%E5%86%99Pywhatkit%E5%8C%85/" rel="alternate" type="text/html" title="改写Pywhatkit包的部分代码" />
     <published>2024-12-21T08:08:34+08:00</published>
   
     <updated>2024-12-28T12:40:11+08:00</updated>
   
-    <id>http://localhost:4000/blog/posts/%E6%94%B9%E5%86%99Pywhatkit%E5%8C%85/</id>
-    <content type="text/html" src="http://localhost:4000/blog/posts/%E6%94%B9%E5%86%99Pywhatkit%E5%8C%85/" />
+    <id>https://red2090.github.io/blog/posts/%E6%94%B9%E5%86%99Pywhatkit%E5%8C%85/</id>
+    <content type="text/html" src="https://red2090.github.io/blog/posts/%E6%94%B9%E5%86%99Pywhatkit%E5%8C%85/" />
     <author>
       <name>陆品宏</name>
     </author>
