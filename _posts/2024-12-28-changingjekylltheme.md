@@ -1,6 +1,6 @@
 ---
 layout: default
-description: "changing jekyll theme "
+description: "修改jekyll主题"
 ---
 
 三天历经千辛万苦，将原版jekyll主题更换
