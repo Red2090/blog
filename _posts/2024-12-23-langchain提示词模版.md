@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title:  "langchain提示词"
 date:   2024-12-23 14:20:00 +0800
 categories: jekyll update
