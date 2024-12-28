@@ -1,0 +1,191 @@
+[
+  
+  {
+    "title": "更换网站jekyll主题",
+    "url": "/blog/posts/%E6%9B%B4%E6%8D%A2%E7%BD%91%E7%AB%99jekyll%E4%B8%BB%E9%A2%98/",
+    "categories": "jekyll, update",
+    "tags": "",
+    "date": "2024-12-28 12:50:00 +0800",
+    
+
+
+
+
+
+    
+    "snippet": "三天历经千辛万苦，将原版jekyll主题更换尝试过直接源文件更换远程主题，修改Gemfile和_config.yml然后bundle下载，遇到的问题有：  bundle无法找到这个remote theme（忘记怎么解决的）  bundle下载后显示的包版本问题不兼容  页面空白显示不出来  在不知道怎么解决了（忘记了）页面空白的问题后，贴文显示不出来（已经把所有的layout:post改成d...",
+    "content": "三天历经千辛万苦，将原版jekyll主题更换尝试过直接源文件更换远程主题，修改Gemfile和_config.yml然后bundle下载，遇到的问题有：  bundle无法找到这个remote theme（忘记怎么解决的）  bundle下载后显示的包版本问题不兼容  页面空白显示不出来  在不知道怎么解决了（忘记了）页面空白的问题后，贴文显示不出来（已经把所有的layout:post改成default）尝试过直接把新主题代码的css和scss搬过来，然后再现有代码的index.html引用，修改部分字体和布局，不更改主题了，遇到问题：  jekyll每次构建都会把刚修改的scss改回来想用本地主题，把这个主题的github仓库克隆下来：  这个主题指引很少，且没有_posts文件夹，看起来不像是可以直接给你克隆的看到了一个youtube视频，这个视频用的是另一个主题，是直接github克隆仓库的方式，文件都是全的，只需要替换文件内容。唯一遇到的错误：  图片显示不出来最后在搜索资料的时候看到了一个关于“site.url和site.baseurl”的帖子，抱着试一试的心态试了试，把图片路径签的site.baseurl改成了site.url，问题解决。site.url是https://red2090.github.io，site.baseurl是/blog，我也不知道为什么之前baseurl就没问题，改完主题就用不了原来的jekyll默认主题minimal：新主题：chirpy"
+  },
+  
+  {
+    "title": "规范模型返回格式",
+    "url": "/blog/posts/%E8%A7%84%E8%8C%83%E6%A8%A1%E5%9E%8B%E5%9B%9E%E5%A4%8D%E6%A0%BC%E5%BC%8F/",
+    "categories": "jekyll, update",
+    "tags": "",
+    "date": "2024-12-24 18:50:00 +0800",
+    
+
+
+
+
+
+    
+    "snippet": "from langchain.prompts import ChatPromptTemplatefrom langchain_openai import ChatOpenAI\"\"\"使用输出解析器规范ai的输出格式\"\"\"\"\"\"让模型返回json\"\"\"from langchain.output_parsers import PydanticOutputParserfrom pydantic im...",
+    "content": "from langchain.prompts import ChatPromptTemplatefrom langchain_openai import ChatOpenAI\"\"\"使用输出解析器规范ai的输出格式\"\"\"\"\"\"让模型返回json\"\"\"from langchain.output_parsers import PydanticOutputParserfrom pydantic import BaseModel, Fieldfrom typing import List\"\"\"这个类定义AI返回的数据需要长什么样一定要继承从pydantic导入BaseModel类, Field里的解释内容也会被ai读到\"\"\"class BookInfo(BaseModel):    book_name: str = Field(description=\"书籍名称\",                            examples=\"百年孤独\")    author_name: str = Field(description=\"书籍的作者\",                            examples=\"加西亚·马尔克斯\")    genres: List[str] = Field(description=\"书籍的体裁\",                            examples=[\"小说\", \"文学\"])\"\"\"创建pydaticOutputParser实例\"\"\"output_parser = PydanticOutputParser(pydantic_object=BookInfo)parser_instructions = output_parser.get_format_instructions()\"\"\"实际给ai的system prompt:    The output should be formatted as a JSON instance that conforms to the JSON schema below.    As an example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}, \"required\": [\"foo\"]}    the object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance of the schema. The object {\"properties\": {\"foo\": [\"bar\", \"baz\"]}} is not well-formatted.    Here is the output schema:    ```    {\"properties\": {\"book_name\": {\"description\": \"书籍名称\", \"examples\": \"百年孤独\", \"title\": \"Book Name\", \"type\": \"string\"}, \"author_name\": {\"description\": \"书籍的作者\", \"examples\": \"加西亚·马尔克斯\", \"title\": \"Author Name\", \"type\": \"string\"}, \"genres\": {\"description\": \"书籍的体裁\", \"examples\": [\"小说\", \"文学\"], \"items\": {\"type\": \"string\"}, \"title\": \"Genres\", \"type\": \"array\"}}, \"required\": [\"book_name\", \"author_name\", \"genres\"]}    ```\"\"\"\"\"\"prompt模板\"\"\"prompt = ChatPromptTemplate.from_messages([    (\"system\", \"{parser_instructions}。请使用中文输出结果\"),    (\"human\", \"请帮我从书籍概述中提取提取书名、作者、及书籍的体裁。书籍概述会被三个#包围。\\n###{book_introduction}###\")])book_introduction = \"\"\"《十宗罪》是中国作家雷米创作的引人入胜的悬疑犯罪小说，书中通过十个独立而又相互关联的案件，深入探讨了人性、道德与社会的复杂性。每个故事围绕一个罪犯的心理和动机展开，展现了他们在绝境中的选择与挣扎。同时，小说详细描绘了警方侦查的过程，展示了侦探们如何通过细致的推理和不懈的努力揭开真相。雷米在作品中不仅构建了紧张刺激的情节，还通过对罪与罚、善与恶界限的模糊探讨，引发了读者对人性深层次的思考。整部作品在悬疑与理性之间找到了平衡，使人既感受到惊悚的氛围，又能深入反思道德选择的复杂性。\"\"\"\"\"\"把实例填进模版\"\"\"final_prompt = prompt.invoke({    \"parser_instructions\": parser_instructions,    \"book_introduction\": book_introduction})\"\"\"运行模型\"\"\"model = ChatOpenAI(model=\"moonshot-v1-8k\", base_url=\"https://api.moonshot.cn/v1\")response = model.invoke(final_prompt)print(response.content)\"\"\" 返回json{  \"book_name\": \"十宗罪\",  \"author_name\": \"雷米\",  \"genres\": [\"悬疑\", \"犯罪\", \"小说\"]}\"\"\"result = output_parser.invoke(response)print(result)\"\"\" 可以解析成BookInfo实例book_name='《十宗罪》' author_name='雷米' genres=['悬疑', '犯罪', '小说', '文学']\"\"\"print(result.book_name)\"\"\"《十宗罪》\"\"\"\"\"\"让模型返回列表\"\"\"from langchain.output_parsers import CommaSeparatedListOutputParserprompt = ChatPromptTemplate.from_messages([    (\"system\", \"{parser_instructions}\"),    (\"human\", \"列出五个{subject}色系的十六进制颜色码\")])output_parser = CommaSeparatedListOutputParser()parser_instructions = output_parser.get_format_instructions()final_prompt = prompt.invoke({    \"subject\": \"莫兰迪\",    \"parser_instructions\": parser_instructions})model = ChatOpenAI(model=\"moonshot-v1-8k\", base_url=\"https://api.moonshot.cn/v1\")response = model.invoke(final_prompt)print(response.content)"
+  },
+  
+  {
+    "title": "langchain提示词",
+    "url": "/blog/posts/langchain%E6%8F%90%E7%A4%BA%E8%AF%8D%E6%A8%A1%E7%89%88/",
+    "categories": "jekyll, update",
+    "tags": "",
+    "date": "2024-12-23 14:20:00 +0800",
+    
+
+
+
+
+
+    
+    "snippet": "from langchain_openai import ChatOpenAIfrom langchain.prompts import SystemMessagePromptTemplate, HumanMessagePromptTemplate, AIMessagePromptTemplatefrom langchain.prompts import FewShotChatMessage...",
+    "content": "from langchain_openai import ChatOpenAIfrom langchain.prompts import SystemMessagePromptTemplate, HumanMessagePromptTemplate, AIMessagePromptTemplatefrom langchain.prompts import FewShotChatMessagePromptTemplate\"\"\"定义系统prompt模板\"\"\"system_template_text = \"\"\"请你充当一家外贸公司的翻译，你可以把文本从{input_language}翻译成{output_language}翻译时请尽量保留客户原本的语气。输出内容不要有任何额外的解释或说明。\"\"\"\"\"\"定义用户prompt模板:\"\"\"human_template_text = \"文本：{text}\\n语言风格：{style}\"\"\"\"创建模版实例\"\"\"system_prompt_template = SystemMessagePromptTemplate.from_template(system_template_text)human_prompt_template = HumanMessagePromptTemplate.from_template(human_template_text)\"\"\"在实例加入变量\"\"\"system_prompt = system_prompt_template.format(input_language=\"英语\", output_language=\"中文\")human_prompt = human_prompt_template.format(text=\"I'm so hungry could eat a horse\", style=\"文言文\")model = ChatOpenAI(model=\"moonshot-v1-8k\", base_url=\"https://api.moonshot.cn/v1\")response = model.invoke([    system_prompt,    human_prompt])print(response.content)"
+  },
+  
+  {
+    "title": "二维码",
+    "url": "/blog/posts/%E4%BA%8C%E7%BB%B4%E7%A0%81/",
+    "categories": "jekyll, update",
+    "tags": "",
+    "date": "2024-12-23 09:00:00 +0800",
+    
+
+
+
+
+
+    
+    "snippet": "一个很有意思的视频https://www.youtube.com/watch?v=w5ebcowAJD8黄色方块是校正标记，相机在很偏的角度读取二维码时，测算这个标记与其余三个方块的距离和角度，让软件重新把二维码缩放成正方形这一条黑白交替的点带告诉机器二维码的大小二维码右下角四个方块代表编码方式，数据从右下至坐上依次排列，未排列完其余的空白部分会添加冗余信息防止二维码损坏时完全扫不出来如果二...",
+    "content": "一个很有意思的视频https://www.youtube.com/watch?v=w5ebcowAJD8黄色方块是校正标记，相机在很偏的角度读取二维码时，测算这个标记与其余三个方块的距离和角度，让软件重新把二维码缩放成正方形这一条黑白交替的点带告诉机器二维码的大小二维码右下角四个方块代表编码方式，数据从右下至坐上依次排列，未排列完其余的空白部分会添加冗余信息防止二维码损坏时完全扫不出来如果二维码出现大块相同颜色，二维码会被掩码，重新以某种规律编排图案，使图案更加随机。"
+  },
+  
+  {
+    "title": "一些ai词汇",
+    "url": "/blog/posts/ai%E8%AF%8D%E6%B1%87/",
+    "categories": "jekyll, update",
+    "tags": "",
+    "date": "2024-12-22 09:21:00 +0800",
+    
+
+
+
+
+
+    
+    "snippet": "思维链：让ai把复杂推理拆分成一步一步，回答准确率会高很多。ai会把注意力放在当前思考步骤上，减少上下文的干扰。在prompt后面加上一句“让我们分步骤思考”能比较简单有效地提升准确率程序辅助语言模型 PAL：ai不会做计算，让ai生成可以得出计算结果的代码，交给python解释器计算结果返回ReAct框架：Re: Reason, Act: Action, 与外界环境交互，可以不只是查看浏览...",
+    "content": "思维链：让ai把复杂推理拆分成一步一步，回答准确率会高很多。ai会把注意力放在当前思考步骤上，减少上下文的干扰。在prompt后面加上一句“让我们分步骤思考”能比较简单有效地提升准确率程序辅助语言模型 PAL：ai不会做计算，让ai生成可以得出计算结果的代码，交给python解释器计算结果返回ReAct框架：Re: Reason, Act: Action, 与外界环境交互，可以不只是查看浏览器b站：林粒粒呀"
+  },
+  
+  {
+    "title": "改写Pywhatkit包的部分代码",
+    "url": "/blog/posts/%E6%94%B9%E5%86%99Pywhatkit%E5%8C%85/",
+    "categories": "jekyll, update",
+    "tags": "",
+    "date": "2024-12-21 08:08:34 +0800",
+    
+
+
+
+
+
+    
+    "snippet": "不打算在C#调用python了，我把python包里的部分功能改写成C#这是一个发送消息的类，定时发送的定时部分还没有改写代码应该很烂，但是我也不知道烂在哪，至少能用。如果有人能指导下我就好了。using System;using System.Collections.Generic;using System.Linq;using System.Text;using System.Threa...",
+    "content": "不打算在C#调用python了，我把python包里的部分功能改写成C#这是一个发送消息的类，定时发送的定时部分还没有改写代码应该很烂，但是我也不知道烂在哪，至少能用。如果有人能指导下我就好了。using System;using System.Collections.Generic;using System.Linq;using System.Text;using System.Threading.Tasks;using System.Diagnostics;using System.Windows.Forms; using WindowsInput;using WindowsInput.Native;namespace WindowsFormsApp3{    internal class SendMessage    {        public string receiver { get; set; }        public string message { get; set; }        public SendMessage(string receiver, string message)        {            this.receiver = receiver;            this.message = message;        }        public void Send(string receiver, string message)        {            OpenWeb();            System.Threading.Thread.Sleep(7000); // 等待页面加载            ClickMiddle();            // 创建 InputSimulator 实例            var sim = new InputSimulator();            foreach (var word in message)            {                if (word == '\\n')                {                    // 同时按下 Shift 和 Enter                    sim.Keyboard.ModifiedKeyStroke(VirtualKeyCode.SHIFT, VirtualKeyCode.RETURN);                }                else                {                    // 逐个按下 message 中的每个字符                    sim.Keyboard.TextEntry(word.ToString()); // 输入字符                }            }            sim.Keyboard.KeyPress(VirtualKeyCode.RETURN);        }        public void OpenWeb()        {            // 打开浏览器输入网址            Process.Start(\"https://web.whatsapp.com/send?phone=\"                + this.receiver                + \"&amp;text=\"                + \"(\" + this.message + \")\"            );           }        public void ClickMiddle()        {            // 获取屏幕的宽度和高度            int screenWidth = Screen.PrimaryScreen.Bounds.Width;            int screenHeight = Screen.PrimaryScreen.Bounds.Height;            // 计算屏幕中心坐标            int centerX = screenWidth / 2;            int centerY = screenHeight / 2;            // 移动鼠标到屏幕中心            Cursor.Position = new System.Drawing.Point(centerX, centerY);            // 模拟鼠标左键按下和抬起            mouse_event(0x0002, (uint)centerX, (uint)centerY, 0, 0); // 左键按下            mouse_event(0x0004, (uint)centerX, (uint)centerY, 0, 0); // 左键抬起        }        [System.Runtime.InteropServices.DllImport(\"user32.dll\")]        private static extern void mouse_event(uint dwFlags, uint dx, uint dy, uint dwData, int dwExtraInfo);    }}"
+  },
+  
+  {
+    "title": "该网站图片失效问题被解决",
+    "url": "/blog/posts/%E8%AF%A5%E7%BD%91%E7%AB%99%E5%9B%BE%E7%89%87%E5%A4%B1%E6%95%88%E9%97%AE%E9%A2%98%E8%A2%AB%E8%A7%A3%E5%86%B3/",
+    "categories": "jekyll, update",
+    "tags": "",
+    "date": "2024-12-20 09:01:00 +0800",
+    
+
+
+
+
+
+    
+    "snippet": "现在这个由GithubPage和jekyll搭建的网站图片失效问题被解决了从csdn看到的办法：这个页面在/blog 分支上，所以图片的相对路径前需要加上/blog/…，分支名用的是_config.yml里的baseurl，不懂它怎么调用的，总之能跑就行。",
+    "content": "现在这个由GithubPage和jekyll搭建的网站图片失效问题被解决了从csdn看到的办法：这个页面在/blog 分支上，所以图片的相对路径前需要加上/blog/…，分支名用的是_config.yml里的baseurl，不懂它怎么调用的，总之能跑就行。"
+  },
+  
+  {
+    "title": "自动发送whatsapp的C#桌面应用",
+    "url": "/blog/posts/csharp%E5%BA%94%E7%94%A8/",
+    "categories": "jekyll, update",
+    "tags": "",
+    "date": "2024-12-20 08:08:34 +0800",
+    
+
+
+
+
+
+    
+    "snippet": "做一个自动发送whatsapp的C#桌面应用ui已经糊好了想在C#里用python的PyWhatKit包，然后找到并下载CSnakes包，然后因为不兼容版本，在vs2022把原装.NET 4升级.NET 8，然后明天再说",
+    "content": "做一个自动发送whatsapp的C#桌面应用ui已经糊好了想在C#里用python的PyWhatKit包，然后找到并下载CSnakes包，然后因为不兼容版本，在vs2022把原装.NET 4升级.NET 8，然后明天再说"
+  },
+  
+  {
+    "title": "ai自动随机更换whatsapp名字头像 无果",
+    "url": "/blog/posts/ai%E8%87%AA%E5%8A%A8%E6%9B%B4%E6%8D%A2whatsapp%E5%90%8D%E5%AD%97%E5%A4%B4%E5%83%8F/",
+    "categories": "jekyll, update",
+    "tags": "",
+    "date": "2024-12-18 21:05:00 +0800",
+    
+
+
+
+
+
+    
+    "snippet": "想做一个ai自动随机更换whatsapp名字头像的程序让ai随机说出一个名词，然后去google爬去这个图片，然后放到whatsapp更改但是发现ai不会“随机”说出东西，在prompt加入随机数也没有用，无果",
+    "content": "想做一个ai自动随机更换whatsapp名字头像的程序让ai随机说出一个名词，然后去google爬去这个图片，然后放到whatsapp更改但是发现ai不会“随机”说出东西，在prompt加入随机数也没有用，无果"
+  },
+  
+  {
+    "title": "初步学会使用selenium爬取动态网页",
+    "url": "/blog/posts/%E5%88%9D%E6%AD%A5%E5%AD%A6%E4%BC%9A%E4%BD%BF%E7%94%A8selenium%E7%88%AC%E5%8A%A8%E6%80%81%E7%BD%91%E9%A1%B5/",
+    "categories": "jekyll, update",
+    "tags": "",
+    "date": "2024-12-17 23:09:00 +0800",
+    
+
+
+
+
+
+    
+    "snippet": "爬了34页的软科大学排名，自动翻页非常帅",
+    "content": "爬了34页的软科大学排名，自动翻页非常帅"
+  },
+  
+  {
+    "title": "第一次爬虫",
+    "url": "/blog/posts/%E7%AC%AC%E4%B8%80%E6%AC%A1%E7%88%AC%E8%99%AB/",
+    "categories": "jekyll, update",
+    "tags": "",
+    "date": "2024-07-23 23:03:34 +0800",
+    
+
+
+
+
+
+    
+    "snippet": "",
+    "content": ""
+  }
+  
+]
+
