@@ -4,7 +4,7 @@
   <id>https://red2090.github.io/blog/</id>
   <title>blog</title>
   <subtitle>Welcome!</subtitle>
-  <updated>2024-12-28T12:44:19+08:00</updated>
+  <updated>2024-12-28T14:23:01+08:00</updated>
   <author>
     <name>陆品宏</name>
     <uri>https://red2090.github.io/blog/</uri>
@@ -17,6 +17,32 @@
   <icon>/blog/assets/img/favicons/favicon.ico</icon>
   <logo>/blog/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>更换网站jekyll主题</title>
+    <link href="https://red2090.github.io/blog/posts/%E6%9B%B4%E6%8D%A2%E7%BD%91%E7%AB%99jekyll%E4%B8%BB%E9%A2%98/" rel="alternate" type="text/html" title="更换网站jekyll主题" />
+    <published>2024-12-28T12:50:00+08:00</published>
+  
+    <updated>2024-12-28T12:50:00+08:00</updated>
+  
+    <id>https://red2090.github.io/blog/posts/%E6%9B%B4%E6%8D%A2%E7%BD%91%E7%AB%99jekyll%E4%B8%BB%E9%A2%98/</id>
+    <content type="text/html" src="https://red2090.github.io/blog/posts/%E6%9B%B4%E6%8D%A2%E7%BD%91%E7%AB%99jekyll%E4%B8%BB%E9%A2%98/" />
+    <author>
+      <name>陆品宏</name>
+    </author>
+
+  
+    
+    <category term="jekyll" />
+    
+    <category term="update" />
+    
+  
+
+  <summary>jekyll theme</summary>
+
+  </entry>
 
   
   <entry>
@@ -119,32 +145,6 @@
   
 
   <summary>笔记</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>改写Pywhatkit包的部分代码</title>
-    <link href="https://red2090.github.io/blog/posts/%E6%94%B9%E5%86%99Pywhatkit%E5%8C%85/" rel="alternate" type="text/html" title="改写Pywhatkit包的部分代码" />
-    <published>2024-12-21T08:08:34+08:00</published>
-  
-    <updated>2024-12-28T12:40:11+08:00</updated>
-  
-    <id>https://red2090.github.io/blog/posts/%E6%94%B9%E5%86%99Pywhatkit%E5%8C%85/</id>
-    <content type="text/html" src="https://red2090.github.io/blog/posts/%E6%94%B9%E5%86%99Pywhatkit%E5%8C%85/" />
-    <author>
-      <name>陆品宏</name>
-    </author>
-
-  
-    
-    <category term="jekyll" />
-    
-    <category term="update" />
-    
-  
-
-  <summary>C#</summary>
 
   </entry>
 
