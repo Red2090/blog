@@ -3,15 +3,9 @@ layout: post
 title:  "langchain提示词"
 date:   2024-12-23 14:20:00 +0800
 categories: jekyll update
+description: "笔记"
 ---
 
-<style>
-    code {
-        font-family: 'SF Mono', 'Menlo', 'Consolas';
-        font-size: small;
-        font-weight: bold;
-    }
-</style>
 
 ```python
 from langchain_openai import ChatOpenAI
