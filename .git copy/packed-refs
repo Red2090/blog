@@ -1,0 +1,12 @@
+# pack-refs with: peeled fully-peeled sorted 
+56aa6db3b5088a555aa563e8bf071f3d18565d3b refs/remotes/origin/master
+74e11c1a57cf38edba26b72801ed65f9eff48bbb refs/remotes/origin/publish-gem
+ea43cbc8d52f369b6aa825b030d8b02dcbed900b refs/remotes/origin/remove-code-text-color
+ec746b6fb4f57e3fcfe3d981d6b9aef6909bb96c refs/tags/v0.0.1
+45abf60a7ddac113ab363b629eaad4ff32cf93a3 refs/tags/v0.0.2
+113e957c22d8e0b9f8863d2761daba6900f9e509 refs/tags/v0.0.3
+9761829edf4294f414f35229a1d4ca0c18d01d33 refs/tags/v0.0.4
+ad70028dd1aa491c4024da33eed0191c6806e7ea refs/tags/v0.1.0
+c6a71685a3835b7090b52f46f943cda7a8b933cc refs/tags/v0.1.1
+dfb16f067d9f799d38590fff41a034832791a382 refs/tags/v0.1.2
+2f96786aaa4fce7ab3df07bd4a9f271b06584c0f refs/tags/v0.2.0
