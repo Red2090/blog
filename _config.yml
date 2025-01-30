@@ -318,6 +318,7 @@ defaults:
       type: posts
     values:
       layout: single
+      show_date: true
       author_profile: true
       comments: true
       share: true
