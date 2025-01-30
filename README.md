@@ -1,187 +1,289 @@
-![logo](logo.png)
---
+# [Minimal Mistakes Jekyll theme](https://mmistakes.github.io/minimal-mistakes/)
 
-A dark and light theme for Jekyll, inspired by Dash UI for Atom. 🌒☀
+[![LICENSE](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://raw.githubusercontent.com/mmistakes/minimal-mistakes/master/LICENSE)
+[![Jekyll](https://img.shields.io/badge/jekyll-%3E%3D%203.7-blue.svg)](https://jekyllrb.com/)
 
-![Build Tag](https://github.com/bitbrain/jekyll-dash/actions/workflows/build-tag.yml/badge.svg)
-[![license](https://img.shields.io/github/license/bitbrain/jekyll-dash.svg?style=flat-square)](LICENSE.MD)
-[![Gem](https://badgen.net/rubygems/v/jekyll-dash)](https://badgen.net/rubygems/v/jekyll-dash "View this project in Rubygems")
-[![Downloads](https://ruby-gem-downloads-badge.herokuapp.com/jekyll-dash)](https://rubygems.org/gems/jekyll-dash "Number of Gem downloads")
----
-This theme for [Jekyll](https://jekyllrb.com/) has been inspired by [dash-ui](https://atom.io/themes/dash-ui), a dark theme for [Atom](https://atom.io).
+Minimal Mistakes is a flexible two-column Jekyll theme, perfect for building personal sites, blogs, and portfolios. As the name implies, styling is purposely minimalistic to be enhanced and customized by you :smile:.
 
-[![design](theme.gif)](http://bitbrain.github.io)
+:sparkles: See what's new in the [CHANGELOG](CHANGELOG.md).
 
-## Features
+**Note:** The theme uses the [jekyll-include-cache](https://github.com/benbalter/jekyll-include-cache) plugin which will need to be installed in your `Gemfile` and must be retained in the `plugins` array of `_config.yml`. Otherwise you'll encounter `Unknown tag 'include_cached'` errors at build.
 
-#### :first_quarter_moon: Dark/Light Mode
-#### :arrow_left: Right-to-Left (RTL) Support
-#### :bookmark: Tags
-#### :orange_book: Pagination
-#### :computer: Syntax Highlighting
-#### :wave: Customisable Avatar Box
-#### :two_hearts: Social Links
+[![Minimal Mistakes live preview][2]][1]
+
+[1]: https://mmistakes.github.io/minimal-mistakes/
+[2]: screenshot.png (live preview)
+
+![layout examples](screenshot-layouts.png)
+
+## Notable features
+
+- Bundled as a "theme gem" for easier installation/upgrading.
+- Compatible with GitHub Pages.
+- Support for Jekyll's built-in Sass/SCSS preprocessor.
+- Nine different skins (color variations).
+- Several responsive layout options (single, archive index, search, splash, and paginated home page).
+- Optimized for search engines with support for [Twitter Cards](https://dev.twitter.com/cards/overview) and [Open Graph](http://ogp.me/) data.
+- Optional [header images](https://mmistakes.github.io/minimal-mistakes/docs/layouts/#headers), [custom sidebars](https://mmistakes.github.io/minimal-mistakes/docs/layouts/#sidebars), [table of contents](https://mmistakes.github.io/minimal-mistakes/docs/helpers/#table-of-contents), [galleries](https://mmistakes.github.io/minimal-mistakes/docs/helpers/#gallery), related posts, [breadcrumb links](https://mmistakes.github.io/minimal-mistakes/docs/configuration/#breadcrumb-navigation-beta), [navigation lists](https://mmistakes.github.io/minimal-mistakes/docs/helpers/#navigation-list), and more.
+- Commenting support (powered by [Disqus](https://disqus.com/), [Facebook](https://developers.facebook.com/docs/plugins/comments), Google+, [Discourse](https://www.discourse.org/), static-based via [Staticman](https://staticman.net/), [utterances](https://utteranc.es/), and [giscus](https://giscus.app/)).
+- [Google Analytics](https://www.google.com/analytics/) support.
+- UI localized text in English (default), Arabic (عربي), Brazilian Portuguese (Português brasileiro), Bulgarian, Catalan, Chinese, Czech, Danish, Dutch, Finnish, French (Français), German (Deutsch), Greek, Hebrew, Hindi (हिंदी), Hungarian, Indonesian, Irish (Gaeilge), Italian (Italiano), Japanese, Kiswahili, Korean, Malayalam, Myanmar (Burmese), Nepali (Nepalese), Norwegian (Norsk), Persian (فارسی), Polish, Punjabi (ਪੰਜਾਬੀ), Romanian, Russian, Slovak, Spanish (Español), Swedish, Thai, Turkish (Türkçe), Ukrainian (Українська) and Vietnamese.
+
+## Skins (color variations)
+
+This theme comes in nine different skins (in addition to the default one).
+
+| `air` | `contrast` | `dark` |
+| --- | --- | --- |
+| [![air skin](https://mmistakes.github.io/minimal-mistakes/assets/images/air-skin-archive.png)](https://mmistakes.github.io/minimal-mistakes/assets/images/air-skin-archive-large.png) | [![contrast skin](https://mmistakes.github.io/minimal-mistakes/assets/images/contrast-skin-archive.png)](https://mmistakes.github.io/minimal-mistakes/assets/images/contrast-skin-archive-large.png) | [![dark skin](https://mmistakes.github.io/minimal-mistakes/assets/images/dark-skin-archive.png)](https://mmistakes.github.io/minimal-mistakes/assets/images/dark-skin-archive-large.png) |
+
+| `dirt` | `mint` | `sunrise` |
+| --- | --- | --- |
+| [![dirt skin](https://mmistakes.github.io/minimal-mistakes/assets/images/dirt-skin-archive.png)](https://mmistakes.github.io/minimal-mistakes/assets/images/dirt-skin-archive-large.png) | [![mint skin](https://mmistakes.github.io/minimal-mistakes/assets/images/mint-skin-archive.png)](https://mmistakes.github.io/minimal-mistakes/assets/images/mint-skin-archive-large.png) | [![sunrise skin](https://mmistakes.github.io/minimal-mistakes/assets/images/sunrise-skin-archive.png)](https://mmistakes.github.io/minimal-mistakes/assets/images/sunrise-skin-archive-large.png) |
+
+| `aqua` | `neon` | `plum` |
+| --- | --- | --- |
+| [![aqua skin](https://mmistakes.github.io/minimal-mistakes/assets/images/aqua-skin-archive.png)](https://mmistakes.github.io/minimal-mistakes/assets/images/aqua-skin-archive-large.png) | [![neon skin](https://mmistakes.github.io/minimal-mistakes/assets/images/neon-skin-archive.png)](https://mmistakes.github.io/minimal-mistakes/assets/images/neon-skin-archive-large.png) | [![plum skin](https://mmistakes.github.io/minimal-mistakes/assets/images/plum-skin-archive.png)](https://mmistakes.github.io/minimal-mistakes/assets/images/plum-skin-archive-large.png) |
+
+## Demo pages
+
+| Name                                        | Description                                           |
+| ------------------------------------------- | ----------------------------------------------------- |
+| [Post with Header Image][header-image-post] | A post with a large header image. |
+| [HTML Tags and Formatting Post][html-tags-post] | A variety of common markup showing how the theme styles them. |
+| [Syntax Highlighting Post][syntax-post] | Post displaying highlighted code. |
+| [Post with a Gallery][gallery-post] | A post showing several images wrapped in `<figure>` elements. |
+| [Sample Collection Page][sample-collection] | Single page from a collection. |
+| [Categories Archive][categories-archive] | Posts grouped by category. |
+| [Tags Archive][tags-archive] | Posts grouped by tag. |
+
+Additional sample posts are available under [posts archive][year-archive] on the demo site. Source files for these (and the entire demo site) can be found in [`/docs`](docs).
+
+[header-image-post]: https://mmistakes.github.io/minimal-mistakes/layout-header-image-text-readability/
+[gallery-post]: https://mmistakes.github.io/minimal-mistakes/post%20formats/post-gallery/
+[html-tags-post]: https://mmistakes.github.io/minimal-mistakes/markup/markup-html-tags-and-formatting/
+[syntax-post]: https://mmistakes.github.io/minimal-mistakes/markup-syntax-highlighting/
+[sample-collection]: https://mmistakes.github.io/minimal-mistakes/recipes/chocolate-chip-cookies/
+[categories-archive]: https://mmistakes.github.io/minimal-mistakes/categories/
+[tags-archive]: https://mmistakes.github.io/minimal-mistakes/tags/
+[year-archive]: https://mmistakes.github.io/minimal-mistakes/year-archive/
 
 ## Installation
 
-Add this line to your Jekyll site's `Gemfile`:
+There are three ways to install: as a [gem-based theme](https://jekyllrb.com/docs/themes/#understanding-gem-based-themes), as a [remote theme](https://blog.github.com/2017-11-29-use-any-theme-with-github-pages/) (GitHub Pages compatible), or forking/directly copying all of the theme files into your project.
 
-For **Jekyll 3**:
-```ruby
-gem 'jekyll-dash', '~> 1'
-```
+### Gem-based method
 
-> Keep in mind: Github pages generation [only supports Jekyll 3.9.x right now](https://pages.github.com/versions/).
+With Gem-based themes, directories such as the `assets`, `_layouts`, `_includes`, and `_sass` are stored in the theme’s gem, hidden from your immediate view. Yet all of the necessary directories will be read and processed during Jekyll’s build process.
 
-For **Jekyll 4**:
-```ruby
-gem 'jekyll-dash', '~> 2'
-```
+This allows for easier installation and updating as you don't have to manage any of the theme files. To install:
 
-And add this line to your Jekyll site's `_config.yml`:
+1. Add the following to your `Gemfile`:
 
-```yaml
-theme: jekyll-dash
-```
+   ```ruby
+   gem "minimal-mistakes-jekyll"
+   ```
 
-And then execute:
+2. Fetch and update bundled gems by running the following [Bundler](http://bundler.io/) command:
 
-    $ bundle
+   ```bash
+   bundle
+   ```
 
-Or install it yourself as:
+3. Set the `theme` in your project's Jekyll `_config.yml` file:
 
-    $ gem install jekyll-dash -v version
+   ```yaml
+   theme: minimal-mistakes-jekyll
+   ```
 
-## Configuration
+To update the theme run `bundle update`.
 
-Add the following configuration to your site. Customise it to your needs!
+### Remote theme method
 
-```yaml
-# required by disqus to display comments
-url: https://your-site-url
+Remote themes are similar to Gem-based themes, but do not require `Gemfile` changes or whitelisting making them ideal for sites hosted with GitHub Pages.
 
-# jekyll-paginate
-paginate: 5
-paginate_path: "/blog/page:num/"
+To install:
 
-# jekyll-tagging (optional)
-tag_permalink_style: pretty
-tag_page_layout: tag_page
-tag_page_dir: tag
+1. Create/replace the contents of your `Gemfile` with the following:
 
-# for github pages custom domains:
-# include: [CNAME]
+   ```ruby
+   source "https://rubygems.org"
 
-dash:
-  # the way how dates should be displayed
-  date_format: "%b %-d, %Y"
+   gem "github-pages", group: :jekyll_plugins
+   gem "jekyll-include-cache", group: :jekyll_plugins
+   ```
 
-  # (optional) discqus comment configuration
-  disqus:
-    shortname: <your-disqus-shortname>  
+2. Add `jekyll-include-cache` to the `plugins` array of your `_config.yml`.
 
-  # the animation speed of the post scroll-in effect
-  animation_speed: 50
+3. Fetch and update bundled gems by running the following [Bundler](https://bundler.io/) command:
 
-  # wether to enable Right-to-Left support or not
-  rtl: false
+   ```bash
+   bundle
+   ```
 
-  # Replaces the default avatar provider (gravatar)
-  #avatar_source: github
-  #github_username: bitbrain
-  #avatar_source: local
-  #avatar_path: /assets/avatar.png
+4. Add `remote_theme: "mmistakes/minimal-mistakes@4.26.2"` to your `_config.yml` file. Remove any other `theme:` or `remote_theme:` entry.
 
-  # generate social links in footer
-  # supported colors: green, red, orange, blue, cyan, pink, teal, yellow, indigo, purple
-  social_links:
-    - url: https://twitter.com/bitbrain_
-      icon: twitter-square
-      color: cyan
-    - url: https://bitbrain.itch.io
-      icon: itch-io
-      color: red
-    - url: https://github.com/bitbrain
-      icon: github-square
-      color: purple
-  
-  # wether the author box should be displayed or not
-  show_author: true
-```
-## Using this theme directly on Github Pages
+<!--
+  Dev note: The version number is currently hard-coded in these files:
 
-Please keep in mind that Github Pages does only support [a limited list of Jekyll plugins](https://pages.github.com/versions/). You will be able to use this theme on Github Pages but some functionality might not be available, for example displaying tags. In order to use this theme to a full extend, you have to generate the `_site` [separately via Github Actions](https://jekyllrb.com/docs/continuous-integration/github-actions/).
+    - package.json
+    - README.md (this file)
+    - docs/_data/theme.yml
+    - docs/_pages/home.md (in Front Matter "excerpt")
 
-* `<username>.github.io` - contains main source branch and orphan gh-pages branch ([see example](https://github.com/bitbrain/bitbrain.github.io))
+  `package.json` holds the authoritative version number, and the others can be updated with `bundle exec rake version`.
 
-I have created [a guide on how to set this up here](https://bitbra.in/2021/10/03/host-your-own-blog-for-free-with-custom-domain.html).
+  The following files should also be regenerated:
 
-You are not required to do this, but keep in mind that some functionality might not be available when using the Jekyll generator on Github directly!
+    - _includes/copyright.html, _includes/copyright.js, _sass/minimal-mistakes/_copyright.scss
+      (Run `bundle exec rake clean` then `bundle exec rake copyright` - all three references `package.json`)
+    - assets/js/main.min.js (Run `bundle exec rake js`, references `_includes/copyright.js`)
 
-If you are using a custom domain add in your main branch a file named CNAME with your domain there and uncomment this line in your config file:
-```
-include: [CNAME]
-```
-For more information about how to configure your CNAME file, read the [official documentation](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site).
+  *Tip*: The default Rake task will update all of the above files at once.
 
-## Additional Features
+  Additionally, the license year is hard-coded in these files and are NOT covered by a Rake task:
 
-**Tagging** add the `jekyll/tagging` plugin to your `_config.yml` file to enable tagging. Do not forget to also add the following to your `Gemfile`:
-```Gemfile
-gem "jekyll-tagging"
-```
-**Gravatar** if you want to display your gravatar picture, add the `liquid-md5` to your `_config.yml` file. Do not forget to also add the following to your `Gemfile`:
-```Gemfile
-gem "liquid-md5"
-```
-## FAQ
+    - README.md (this file, near the end)
+    - LICENSE
+-->
 
-> I have configured posts but no posts are showing?
+**Looking for an example?** Use the [Minimal Mistakes remote theme starter](https://github.com/mmistakes/mm-github-pages-starter/generate) for the quickest method of getting a GitHub Pages hosted site up and running. Generate a new repository from the starter, replace sample content with your own, and configure as needed.
 
-**Solution:** You most probably forgot to configure [jekyll-paginate](https://jekyllrb.com/docs/pagination/) in your _config.yml! Make sure you have the correct configuration as described above!
+## Usage
 
-> I have added the correct configuration for `jekyll-paginate` but it is now complaining about a missing `index.html` file. What do I do?
-
-**Solution** pagination only works with HTML files! Markdown is not supported there. Simply rename your `index.md` into `index.html` - that should do the trick!
-
-> I have configured Disqus via _config.yml but Disqus fails to load on the page? 
-
-**Solution:** Make sure you configure the correct `url` within your `_config.yml`. Also make sure that your domain is trusted by Disqus. This can be configured within Disqus by adding a trusted domain.
-
-> I am using this theme but I don't see any tags?
-
-**Solution**: as described above you have to add the tagging plugin. Additionally, tags do not work natively by Github Pages. [You have to build your site on an external CI](https://bitbra.in/2021/10/03/host-your-own-blog-for-free-with-custom-domain.html) and push the `_site` artifacts to a hosting repository.
-
-> I am getting an error that Bundler could not find compatible versions for gem
-
-**Solution**
-
-Make sure you are using a version of this theme that is compatible with Jekyll. Version 1.x is only compatible with Jekyll 3.x while Version 2.x is only compatible with Jekyll 4.x.
-
-> I am getting an error 'cannot load such file --webrick' when trying to run `bundle exec jekyll serve`
-
-**Solution**
-
-As [explained here](https://github.com/jekyll/jekyll/issues/8523#issuecomment-751409319) this seems to be a bug with some recent Jekyll 4 version. To solve this simply run:
-```bash
-bundle add webrick
-```
+For detailed instructions on how to configure, customize, add/migrate content, and more read the [theme's documentation](https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/).
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/bitbrain/jekyll-dash. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Found a typo in the documentation or interested in [fixing a bug](https://github.com/mmistakes/minimal-mistakes/issues)? Then by all means [submit an issue](https://github.com/mmistakes/minimal-mistakes/issues/new) or [pull request](https://help.github.com/articles/using-pull-requests/). If this is your first pull request, it may be helpful to read up on the [GitHub Flow](https://guides.github.com/introduction/flow/) first.
+
+For help with using the theme or general Jekyll support questions, please use the [Jekyll Talk forums](https://talk.jekyllrb.com/).
+
+### Pull Requests
+
+When submitting a pull request:
+
+1. Clone the repo.
+2. Create a branch off of `master` and give it a meaningful name (e.g. `my-awesome-new-feature`).
+3. Open a pull request on GitHub and describe the feature or fix.
+
+Theme documentation and demo pages can be found in the [`/docs`](docs) if submitting improvements, typo corrections, etc.
 
 ## Development
 
 To set up your environment to develop this theme, run `bundle install`.
 
-Your theme is setup just like a normal Jekyll site! To test your theme, run `bundle exec jekyll serve` and open your browser at `http://localhost:4000`. This starts a Jekyll server using your theme. Add pages, documents, data, etc. like normal to test your theme's contents. As you make modifications to your theme and to your content, your site will regenerate and you should see the changes in the browser after a refresh, just like normal.
+To test the theme, run `bundle exec rake preview` and open your browser at `http://localhost:4000/test/`. This starts a Jekyll server using content in the `test/` directory. As modifications are made to the theme and test site, it will regenerate and you should see the changes in the browser after a refresh.
 
-When your theme is released, only the files in `_layouts`, `_includes`, `_sass` and `assets` tracked with Git will be bundled.
-To add a custom directory to your theme-gem, please edit the regexp in `jekyll-dash.gemspec` accordingly.
+## Credits
 
-> If you want to learn how Jekyll Dash gets deployed via Github Actions, feel free [to read this article](https://bitbra.in/2021/10/05/workflow-of-releasing-gem-based-jekyll-theme.html) written by me.
+### Creator
+
+**Michael Rose**
+
+- <https://mademistakes.com>
+- <https://twitter.com/mmistakes>
+- <https://github.com/mmistakes>
+
+### Icons + Demo Images:
+
+- [The Noun Project](https://thenounproject.com) - Garrett Knoll, Arthur Shlain, and [tracy tam](https://thenounproject.com/tracytam)
+- [Font Awesome](http://fontawesome.io/)
+- [Unsplash](https://unsplash.com/)
+
+### Other:
+
+- [Jekyll](http://jekyllrb.com/)
+- [jQuery](http://jquery.com/)
+- [Susy](http://susy.oddbird.net/)
+- [Breakpoint](http://breakpoint-sass.com/)
+- [Magnific Popup](http://dimsemenov.com/plugins/magnific-popup/)
+- [FitVids.JS](http://fitvidsjs.com/)
+- [GreedyNav.js](https://github.com/lukejacksonn/GreedyNav)
+- [Smooth Scroll](https://github.com/cferdinandi/smooth-scroll)
+- [Gumshoe](https://github.com/cferdinandi/gumshoe)
+- [jQuery throttle / debounce](http://benalman.com/projects/jquery-throttle-debounce-plugin/)
+- [Lunr](http://lunrjs.com)
+- [Clipboard.js](https://clipboardjs.com)
 
 ## License
 
-The theme is available as open source under the terms of the [Apache License 2.0](https://opensource.org/licenses/Apache-2.0).
+The MIT License (MIT)
+
+Copyright (c) 2013-2024 Michael Rose and contributors
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+Minimal Mistakes incorporates icons from [The Noun Project](https://thenounproject.com/) 
+creators Garrett Knoll, Arthur Shlain, and tracy tam.
+Icons are distributed under Creative Commons Attribution 3.0 United States (CC BY 3.0 US).
+
+Minimal Mistakes incorporates [Font Awesome](http://fontawesome.io/),
+Copyright (c) 2017 Dave Gandy.
+Font Awesome is distributed under the terms of the [SIL OFL 1.1](http://scripts.sil.org/OFL) 
+and [MIT License](http://opensource.org/licenses/MIT).
+
+Minimal Mistakes incorporates photographs from [Unsplash](https://unsplash.com).
+
+Minimal Mistakes incorporates [Susy](http://susy.oddbird.net/),
+Copyright (c) 2017, Miriam Eric Suzanne.
+Susy is distributed under the terms of the [BSD 3-clause "New" or "Revised" License](https://opensource.org/licenses/BSD-3-Clause).
+
+Minimal Mistakes incorporates [Breakpoint](http://breakpoint-sass.com/).
+Breakpoint is distributed under the terms of the [MIT/GPL Licenses](http://opensource.org/licenses/MIT).
+
+Minimal Mistakes incorporates [FitVids.js](https://github.com/davatron5000/FitVids.js/),
+Copyright (c) 2013 Dave Rubert and Chris Coyier.
+FitVids is distributed under the terms of the [WTFPL License](http://www.wtfpl.net/).
+
+Minimal Mistakes incorporates [Magnific Popup](http://dimsemenov.com/plugins/magnific-popup/),
+Copyright (c) 2014-2016 Dmitry Semenov, http://dimsemenov.com.
+Magnific Popup is distributed under the terms of the MIT License.
+
+Minimal Mistakes incorporates [Smooth Scroll](http://github.com/cferdinandi/smooth-scroll),
+Copyright (c) 2019 Chris Ferdinandi.
+Smooth Scroll is distributed under the terms of the [MIT License](http://opensource.org/licenses/MIT).
+
+Minimal Mistakes incorporates [Gumshoejs](http://github.com/cferdinandi/gumshoe),
+Copyright (c) 2019 Chris Ferdinandi.
+Gumshoejs is distributed under the terms of the [MIT License](http://opensource.org/licenses/MIT).
+
+Minimal Mistakes incorporates [jQuery throttle / debounce](http://benalman.com/projects/jquery-throttle-debounce-plugin/),
+Copyright (c) 2010 "Cowboy" Ben Alman.
+jQuery throttle / debounce is distributed under the terms of the [MIT License](http://opensource.org/licenses/MIT).
+
+Minimal Mistakes incorporates [GreedyNav.js](https://github.com/lukejacksonn/GreedyNav),
+Copyright (c) 2015 Luke Jackson.
+GreedyNav.js is distributed under the terms of the [MIT License](http://opensource.org/licenses/MIT).
+
+Minimal Mistakes incorporates [Jekyll Group-By-Array](https://github.com/mushishi78/jekyll-group-by-array),
+Copyright (c) 2015 Max White <mushishi78@gmail.com>.
+Jekyll Group-By-Array is distributed under the terms of the [MIT License](http://opensource.org/licenses/MIT).
+
+Minimal Mistakes incorporates [@allejo's Pure Liquid Jekyll Table of Contents](https://allejo.io/blog/a-jekyll-toc-in-liquid-only/),
+Copyright (c) 2017 Vladimir Jimenez.
+Pure Liquid Jekyll Table of Contents is distributed under the terms of the [MIT License](http://opensource.org/licenses/MIT).
+
+Minimal Mistakes incorporates [Lunr](http://lunrjs.com),
+Copyright (c) 2018 Oliver Nightingale.
+Lunr is distributed under the terms of the [MIT License](http://opensource.org/licenses/MIT).
+
+Minimal Mistakes incorporates [clipboard.js](https://clipboardjs.com/),
+Copyright (c) 2021 Zeno Rocha.
+Clipboard.js is distributed under the terms of the [MIT License](https://opensource.org/licenses/MIT).
