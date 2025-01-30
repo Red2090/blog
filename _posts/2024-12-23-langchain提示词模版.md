@@ -1,10 +1,11 @@
 ---
-title:  "langchain提示词"
+title:  "langchain:提示词"
 date:   2024-12-23 14:20:00 +0800
 categories: jekyll update
 description: "笔记"
 ---
 
+langchain的提示词模版
 
 ```python
 from langchain_openai import ChatOpenAI

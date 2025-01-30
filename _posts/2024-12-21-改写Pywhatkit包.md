@@ -5,6 +5,8 @@ categories: jekyll update
 description: "C#"
 ---
 
+我改写了Pywhatkit包的部分代码。
+
 不打算在C#调用python了，我把python包里的部分功能改写成C#
 
 这是一个发送消息的类，定时发送的定时部分还没有改写
