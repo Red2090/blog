@@ -1,5 +1,4 @@
 ---
-layout: default
 title:  "改写Pywhatkit包的部分代码"
 date:   2024-12-21 8:08:34 +0800
 categories: jekyll update

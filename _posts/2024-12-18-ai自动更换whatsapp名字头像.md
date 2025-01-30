@@ -1,5 +1,4 @@
 ---
-layout: default
 title:  "ai自动随机更换whatsapp名字头像 无果"
 date:   2024-12-18 21:05:00 +0800
 categories: jekyll update
