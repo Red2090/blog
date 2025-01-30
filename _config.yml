@@ -113,11 +113,11 @@ analytics:
 
 # Site Author
 author:
-  name             : "Your Name"
-  avatar           : "/assets/images/202402301.jpg"
+  name             : "陆品宏"
+  avatar           : "/assets/images/icon.jpg"
   bio              : "I am an **amazing** person."
-  location         : "Somewhere"
-  email            :
+  location         : "Not On Earth"
+  email            : "197858770@qq.com"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
