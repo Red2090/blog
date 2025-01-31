@@ -16,7 +16,7 @@ ReAct：Reason Action
 ......                       
 步骤N  推理->结果  
 <br/>
-[](https://smith.langchain.com/hub)  
+[这里有很多提示词模版](https://smith.langchain.com/hub)  
 
 
 ```python
