@@ -7,15 +7,17 @@ tags:
   - AI
 ---
 
-让模型使用工具
+让模型使用工具  
+  
+ReAct：Reason Action  
 
-ReAct：Reason Action
-步骤一 推理->行动->观察
-步骤二 推理->行动->观察
-......                   
-步骤N  推理->结果
+步骤一 推理->行动->观察  
+步骤二 推理->行动->观察  
+......                       
+步骤N  推理->结果  
+<br/>
+[](https://smith.langchain.com/hub)  
 
-[](https://smith.langchain.com/hub)
 
 ```python
 from langchain_openai import ChatOpenAI
