@@ -1,5 +1,5 @@
 ---
-title:  "langchain: 使用工具"
+title:  "langchain:使用工具"
 date:   2025-2-1 04:53:00 +0800
 tags:
   - python
