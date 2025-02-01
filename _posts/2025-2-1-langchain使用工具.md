@@ -8,14 +8,20 @@ tags:
 ---
 
 让模型使用工具  
-  
+
+<br/>
+
 ReAct：Reason Action  
 
 步骤一 推理->行动->观察  
 步骤二 推理->行动->观察  
 ......                       
 步骤N  推理->结果  
+
 <br/>
+
+PAL: 程序辅助语言模型
+
 [这里有很多提示词模版](https://smith.langchain.com/hub)  
 
 
