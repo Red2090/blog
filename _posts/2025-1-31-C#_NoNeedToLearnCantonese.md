@@ -109,7 +109,7 @@ namespace NoNeedToLearnCantonese
 GetTextWithoutSelection() 获取文本框里的文本并返回
 SetTextUsingValuePattern(string newText) 替换文本框里的文本，传入的参数可以是空字符串
 
-```C#
+```csharp
 using System;
 using System.Drawing;
 using System.Runtime.InteropServices;
@@ -207,7 +207,7 @@ GetCaretPosition() 获取文本框光标，返回System.Drawing.Point类型
 GetText() 调用了GetCaretPosition()，然后粗鲁的点击鼠标三下全选文本，复制文本，读取剪贴板
 
 
-```C#
+```csharp
 using System;
 using System.Drawing;
 using System.Windows.Forms;
@@ -281,7 +281,7 @@ namespace NoNeedToLearnCantonese
 
 GetText() 返回string
 
-```C#
+```csharp
 [DllImport("user32.dll")]
 private static extern void mouse_event(uint dwFlags, int dx, int dy, uint dwData, int dwExtraInfo);
 
@@ -333,7 +333,7 @@ public string GetText()
 
 KeyBoardHook类：从网上抄的，完全不懂。
 
-```C#
+```csharp
 using System;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
@@ -498,7 +498,7 @@ namespace NoNeedToLearnCantonese
 
 调用KeyBoardHook的示例：
 
-```C#
+```csharp
 private void MainForm_Load(object sender, EventArgs e)
 {
     k_hook = new KeyboardHook();
