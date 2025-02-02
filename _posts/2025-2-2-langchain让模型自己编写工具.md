@@ -36,7 +36,7 @@ agent_executor = create_python_agent(
 agent_executor.invoke({"input": "斐波那契数列的第40个数字是多少"})
 ```
 
-```terminal
+````terminal
 > Entering new AgentExecutor chain...
 To find the 40th Fibonacci number, I can write a Python function that calculates Fibonacci numbers iteratively.
 Action: python_repl_ast
@@ -54,4 +54,4 @@ Thought:I now know the final answer
 Final Answer: 102334155
 
 > Finished chain.
-```
+````
