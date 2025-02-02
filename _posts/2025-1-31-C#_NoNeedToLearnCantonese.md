@@ -9,7 +9,7 @@ tags:
 
 发送ai api请求的部分我使用了System.Net.Http库来模拟http请求，1月27日的记录中的问题是由于向json的模版插入提示词的参数时，参数中的换行导致json格式被打乱，导致400 bad request和404。
 
-```C#
+```csharp
 using System;
 using System.Net.Http;
 using System.Text;
