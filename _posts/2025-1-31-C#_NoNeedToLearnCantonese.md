@@ -7,6 +7,8 @@ tags:
 
 使用c#和ai翻译和替换文本框输入的文字-完成
 
+<br/>
+
 发送ai api请求的部分我使用了System.Net.Http库来模拟http请求，1月27日的记录中的问题是由于向json的模版插入提示词的参数时，参数中的换行导致json格式被打乱，导致400 bad request和404。
 
 ```csharp
@@ -106,8 +108,16 @@ namespace NoNeedToLearnCantonese
 ```
 
 文本操作类：
+
+<br/>
+
 GetTextWithoutSelection() 获取文本框里的文本并返回
+
+<br/>
+
 SetTextUsingValuePattern(string newText) 替换文本框里的文本，传入的参数可以是空字符串
+
+<br/>
 
 ```csharp
 using System;
@@ -203,9 +213,16 @@ namespace NoNeedToLearnCantonese
 ```
 
 一些窗口不支持直接从ui控件操作文本，我们有十分原始粗鲁的备用方案。
+
+<br/>
+
 GetCaretPosition() 获取文本框光标，返回System.Drawing.Point类型
+
+<br/>
+
 GetText() 调用了GetCaretPosition()，然后粗鲁的点击鼠标三下全选文本，复制文本，读取剪贴板
 
+<br/>
 
 ```csharp
 using System;
