@@ -41,10 +41,10 @@ class TextLengthTool(BaseTool):
     """
     定义工具类，继承BaseTool。name和description是必须的，ai会读取他们。
     """
-    name = "文本字数计算工具"
-    description = "当你被要求计算文本字数时，使用此工具。"
+    name: str= "文本字数计算工具"
+    description: str = "当你被要求计算文本字数时，使用此工具。"
     
-    def _run(self, text:str) -> str:
+    def _run(self, text:str) -> int:
         return len(text)
 
 """把工具放进列表"""
