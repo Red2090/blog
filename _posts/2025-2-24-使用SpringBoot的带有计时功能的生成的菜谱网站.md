@@ -15,6 +15,7 @@ AI帮了我大部分的忙，它带我熟悉了SpringBoot的项目结构。没�
 项目用的是SpringBoot MVC的结构，AI的部分使用的是langchain4j，langchain的Java版本。代码和prompt会放在后面记录一下。
 
 网站没有域名，输入公网ip访问，没有人会想攻击这个服务器吧？他只是测试用的
+
 [here](http://221.12.72.203:8080)
 
 
