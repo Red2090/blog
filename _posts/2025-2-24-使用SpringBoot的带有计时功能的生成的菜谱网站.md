@@ -1,5 +1,5 @@
 ---
-title:  "使用SpringBoot的带有计时功能的生成的菜谱网站"
+title:  "使用SpringBoot的带有计时功能的生成菜谱的网站"
 date:   2025-2-24 00:09:00 +0800
 tags:
   - Java
