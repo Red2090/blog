@@ -17,7 +17,6 @@ AI帮了我大部分的忙，它带我熟悉了SpringBoot的项目结构。没�
 网站没有域名，输入公网ip访问 221.12.72.203:8080
 
 
-![图片]({{site.baseurl}}/assets/images/2025022401.png)
 
 项目结构
 ```markdown
@@ -74,9 +73,12 @@ API
 }
 ```
 
+
+
+
 这是AIServiceBaseClassUsingLangChain类，他的子类可以根据不同的配置重写类中的getApiUrl()getApiKey()getModelName()getTemperature()和getSystemPrompt()方法。
 
-```Java
+```java
 package com.cookingiseasy.cookingiseasy.service;
 
 import com.cookingiseasy.cookingiseasy.dto.RecipeResponse;
@@ -164,3 +166,7 @@ public abstract class AIServiceBaseClassUsingLangChain implements IAIService{
 }
 
 ```
+
+
+
+![图片]({{site.baseurl}}/assets/images/2025022401.png)
